@@ -11,11 +11,11 @@ const router = createBrowserRouter([
    element: <MainLayout />,
    errorElement: <ErrorPage />, 
    children: [
-    {path: '/', element: <HomePage />},
-    {path: '/products', element: <ProductPage />},
-    {path: '/products/:productId', element: <ProductDetail />}
+    {index: true, element: <HomePage />}, // Or {path: '/', element: <HomePage />}, 
+    {path: '/products', element: <ProductPage />}, //Or Relative Path  {path: 'products', element: <ProductPage />}, 
+    {path: '/products/:productId', element: <ProductDetail />} //Or Relative Path {path: 'products/:productId', element: <ProductDetail />}
   ]},
-])
+]);
 
 function App() {
   return <RouterProvider router={router} />;

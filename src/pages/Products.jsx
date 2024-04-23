@@ -15,6 +15,7 @@ function ProductPage() {
         {PRODUCTS.map((product) => (
           <li key={product.id}>
             <Link to={`/products/${product.id}`} >{product.title}</Link>
+            {/*Could also be relative Path  <Link to={`products/${product.id}`} >{product.title}</Link> */}
           </li>
         ))}
       </ul>
